@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --atlas-bg-0: #08131c;
+  --atlas-bg-1: #102431;
+  --atlas-ink: #e6f0f4;
+  --atlas-muted: rgba(219, 233, 238, 0.72);
+  --atlas-line: rgba(176, 214, 223, 0.22);
+  --atlas-panel: linear-gradient(160deg, rgba(16, 43, 57, 0.74), rgba(10, 24, 36, 0.7));
+  --atlas-chip: rgba(126, 192, 210, 0.14);
+  --atlas-chip-hover: rgba(126, 192, 210, 0.24);
+}
+
+/* Prevent scroll-chain interference without forcing browser zoom behavior */
+html {
+  overscroll-behavior: none;
+  background: var(--atlas-bg-0);
+}
+
+body {
+  overscroll-behavior: none;
+  margin: 0;
+  background: radial-gradient(1000px 540px at 10% -20%, rgba(31, 120, 126, 0.22), transparent), var(--atlas-bg-0);
+  color: var(--atlas-ink);
+  -webkit-overflow-scrolling: auto;
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Prevent selection and context menus on interactive elements */
+.viewport-container {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+  overscroll-behavior: none;
+  box-shadow:
+    0 26px 52px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(177, 220, 229, 0.14),
+    inset 0 0 120px rgba(18, 71, 88, 0.22);
+}
+
+/* Disable image dragging */
+img, canvas {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.atlas-panel {
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-line);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.atlas-chip {
+  background: var(--atlas-chip);
+  border: 1px solid var(--atlas-line);
+  color: var(--atlas-ink);
+  transition: background 150ms ease, border-color 150ms ease, transform 120ms ease;
+}
+
+.atlas-chip:hover {
+  background: var(--atlas-chip-hover);
+  border-color: rgba(194, 232, 241, 0.35);
+}
+
+.atlas-chip:active {
+  transform: translateY(1px);
+}

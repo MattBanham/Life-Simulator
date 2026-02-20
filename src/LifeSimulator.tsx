@@ -62,7 +62,7 @@ function getScaledStartingPopulations(worldWidth: number, worldHeight: number) {
   return { plants, animals };
 }
 
-export default function EvolutionSimulator() {
+export default function LifeSimulator() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const viewportRef = useRef<HTMLDivElement | null>(null);
   const minimapRef = useRef<HTMLCanvasElement | null>(null);

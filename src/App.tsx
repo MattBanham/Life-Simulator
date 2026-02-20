@@ -1,7 +1,7 @@
-import EvolutionSimulator from './EvolutionSimulator'
+import LifeSimulator from './LifeSimulator'
 
 function App() {
-  return <EvolutionSimulator />
+  return <LifeSimulator />
 }
 
 export default App

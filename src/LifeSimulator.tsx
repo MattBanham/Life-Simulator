@@ -2457,8 +2457,16 @@ export default function LifeSimulator() {
       </div>
 
       {/* Footer tip */}
-      <div className="p-3 text-xs text-white/70" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-        Tip: Planetary view for ecosystem patterns, local view for behaviors. Drag to pan, Ctrl/Cmd+Wheel to zoom at cursor.
+      <div className="p-3 text-xs text-white/70 flex flex-wrap items-center justify-between gap-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+        <span>Tip: Planetary view for ecosystem patterns, local view for behaviors. Drag to pan, Ctrl/Cmd+Wheel to zoom at cursor.</span>
+        <a
+          className={`${pill} text-xs py-1 px-2 hover:opacity-90 transition-opacity`}
+          href="https://buymeacoffee.com/matt_banham"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Buy Me a Coffee
+        </a>
       </div>
     </div>
   );
